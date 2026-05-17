@@ -1,8 +1,8 @@
 package model;
-//Interface para os descontos, a fim de poder adicionar novas politicas
+
+// Interface para política de desconto — permite adicionar novas políticas
+// sem alterar Experiencia ou Ingresso (Strategy Pattern)
 public interface Desconto {
-
     double calcularPreco(double precoBase);
-
     boolean temAcessoPrioritario();
 }

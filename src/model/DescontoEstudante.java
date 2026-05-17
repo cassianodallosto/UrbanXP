@@ -1,7 +1,6 @@
 package model;
 
-//desconto percentual sobre o preço base.
-
+// Estudante recebe desconto percentual sobre o preço base
 public class DescontoEstudante implements Desconto {
 
     private double percentualDesconto; // ex: 0.20 para 20%
@@ -18,5 +17,9 @@ public class DescontoEstudante implements Desconto {
     @Override
     public boolean temAcessoPrioritario() {
         return false;
+    }
+
+    public double getPercentualDesconto() {
+        return percentualDesconto;
     }
 }

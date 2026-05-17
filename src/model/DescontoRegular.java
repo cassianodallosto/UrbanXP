@@ -1,5 +1,6 @@
 package model;
 
+// Cliente regular paga o preço base integral
 public class DescontoRegular implements Desconto {
 
     @Override

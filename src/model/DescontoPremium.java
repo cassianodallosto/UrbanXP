@@ -1,7 +1,6 @@
 package model;
 
-
- //valor fixo reduzido + acesso prioritário.
+// Membro premium paga valor fixo reduzido e tem acesso prioritário
 public class DescontoPremium implements Desconto {
 
     private double valorFixo;
@@ -18,5 +17,9 @@ public class DescontoPremium implements Desconto {
     @Override
     public boolean temAcessoPrioritario() {
         return true;
+    }
+
+    public double getValorFixo() {
+        return valorFixo;
     }
 }

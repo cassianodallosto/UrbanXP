@@ -1,13 +1,18 @@
 package model;
 
-enum StatusIngresso {
-    RESERVADO("Seu ingresso foi reservado! \n\nEfetue o pagamento!"),
-    PAGO("Seu pagamento foi efetuado com sucesso!"),
-    CANCELADO("Você cancelou sua reserva!");
+// Enum garante que apenas estados válidos existam — verificado em tempo de compilação
+public enum StatusIngresso {
+    RESERVADO("Ingresso reservado! Efetue o pagamento."),
+    PAGO("Pagamento efetuado com sucesso!"),
+    CANCELADO("Reserva cancelada.");
 
-    private String descricao;
+    private final String descricao;
 
-    private StatusIngresso(String descricao){
+    StatusIngresso(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }
